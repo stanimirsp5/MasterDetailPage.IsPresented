@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  x:Class="livelabel.LiveLabel"
+                  xmlns:pages="clr-namespace:livelabel">
+    <MasterDetailPage.Master>
+            <ContentPage Padding="10"
+                     BackgroundColor="Gray"
+                     Title="Master"
+                     Icon="hamburger.png">
+            <ContentPage.Content>
+                <StackLayout Margin="5,30,5,5">
+                    <Label Text="Master Page">
+                    </Label>
+
+                    <Button x:Name="b1"
+                            Text="Close master page"
+                            BackgroundColor="Yellow"
+                            Clicked="CloseMasterPage"></Button>
+                </StackLayout>
+            </ContentPage.Content>
+        </ContentPage>
+
+    </MasterDetailPage.Master>
+  
+    <MasterDetailPage.Detail>
+        <NavigationPage>
+            <NavigationPage.BarBackgroundColor>
+                Transparent
+            </NavigationPage.BarBackgroundColor>
+            <NavigationPage.BackgroundColor>
+                Gray
+            </NavigationPage.BackgroundColor>
+            <x:Arguments>
+                <pages:LiveLabelDetail />
+            </x:Arguments>
+        </NavigationPage>
+    </MasterDetailPage.Detail>
+    
+</MasterDetailPage>
